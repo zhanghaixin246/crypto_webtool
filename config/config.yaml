@@ -1,0 +1,24 @@
+system:
+  api-mode: true
+  port: :8083  #不能热加载
+  temp-file: tmp.yaml
+  generate-dir: organizations
+#  generate-dir: api-generat
+  configtx-path: configtx
+  configtx-file: configtx.yaml
+  crypto-config: true
+  env: public
+  addr: 8888
+  db-type: mysql
+  oss-type: local
+  use-multipoint: false
+zap:
+  level: info
+  format: console
+  prefix: '[web_tool]'
+  director: log
+  link-name: latest_log
+  showLine: true
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  log-in-console: true
