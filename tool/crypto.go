@@ -7,7 +7,6 @@ package tool
 
 import (
 	"bytes"
-	"encoding/json"
 	"fmt"
 	"github.com/pkg/errors"
 	"io"
@@ -301,7 +300,7 @@ func extendPeerOrg(orgSpec OrgSpec) {
 	orgName := orgSpec.Domain
 	orgDir := filepath.Join(*inputDir, "peerOrganizations", orgName)
 	if _, err := os.Stat(orgDir); os.IsNotExist(err) {
-		generatePeerOrg(*inputDir, orgSpec)
+		generatePeerOrg(*inputDir, orgSpec,nil)
 		return
 	}
 
@@ -355,7 +354,7 @@ func extendOrdererOrg(orgSpec OrgSpec) {
 	tlscaDir := filepath.Join(orgDir, "tlsca")
 	orderersDir := filepath.Join(orgDir, "orderers")
 	if _, err := os.Stat(orgDir); os.IsNotExist(err) {
-		generateOrdererOrg(*inputDir, orgSpec)
+		generateOrdererOrg(*inputDir, orgSpec,nil)
 		return
 	}
 
@@ -383,10 +382,10 @@ func extendOrdererOrg(orgSpec OrgSpec) {
 	}
 }
 
-func Generate(osFile **os.File, outputDir *string) error {
+func Generate(osFile **os.File, outputDir *string,genUseRSA *bool) error {
 	config, err := getConfig(osFile)
-	res, _ := json.Marshal(config)
-	fmt.Println("config:", string(res))
+	//res, _ := json.Marshal(config)
+	//fmt.Println("config:", string(res))
 	if err != nil {
 		return errors.New("Error reading config: " + err.Error())
 		//fmt.Printf("Error reading config: %s", err)
@@ -400,7 +399,7 @@ func Generate(osFile **os.File, outputDir *string) error {
 			//fmt.Printf("Error processing peer configuration: %s", err)
 			//os.Exit(-1)
 		}
-		generatePeerOrg(*outputDir, orgSpec)
+		generatePeerOrg(*outputDir, orgSpec,genUseRSA)
 	}
 
 	for _, orgSpec := range config.OrdererOrgs {
@@ -410,7 +409,7 @@ func Generate(osFile **os.File, outputDir *string) error {
 			//fmt.Printf("Error processing orderer configuration: %s", err)
 			//os.Exit(-1)
 		}
-		generateOrdererOrg(*outputDir, orgSpec)
+		generateOrdererOrg(*outputDir, orgSpec,genUseRSA)
 	}
 	return nil
 }
@@ -518,7 +517,7 @@ func renderOrgSpec(orgSpec *OrgSpec, prefix string) error {
 	return nil
 }
 
-func generatePeerOrg(baseDir string, orgSpec OrgSpec) {
+func generatePeerOrg(baseDir string, orgSpec OrgSpec,genUseRSA *bool) {
 
 	orgName := orgSpec.Domain
 
@@ -531,14 +530,27 @@ func generatePeerOrg(baseDir string, orgSpec OrgSpec) {
 	peersDir := filepath.Join(orgDir, "peers")
 	usersDir := filepath.Join(orgDir, "users")
 	adminCertsDir := filepath.Join(mspDir, "admincerts")
+	var err error
 	// generate signing CA
-	signCA, err := ca.NewCA(caDir, orgName, orgSpec.CA.CommonName, orgSpec.CA.Country, orgSpec.CA.Province, orgSpec.CA.Locality, orgSpec.CA.OrganizationalUnit, orgSpec.CA.StreetAddress, orgSpec.CA.PostalCode)
+	var signCA *ca.CA
+	if *genUseRSA {
+		signCA, err = ca.NewRSACA(caDir, orgName, orgSpec.CA.CommonName, orgSpec.CA.Country, orgSpec.CA.Province, orgSpec.CA.Locality, orgSpec.CA.OrganizationalUnit, orgSpec.CA.StreetAddress, orgSpec.CA.PostalCode)
+	}else {
+		signCA, err = ca.NewCA(caDir, orgName, orgSpec.CA.CommonName, orgSpec.CA.Country, orgSpec.CA.Province, orgSpec.CA.Locality, orgSpec.CA.OrganizationalUnit, orgSpec.CA.StreetAddress, orgSpec.CA.PostalCode)
+	}
+
 	if err != nil {
 		fmt.Printf("Error generating signCA for org %s:\n%v\n", orgName, err)
 		os.Exit(1)
 	}
 	// generate TLS CA
-	tlsCA, err := ca.NewCA(tlsCADir, orgName, "tls"+orgSpec.CA.CommonName, orgSpec.CA.Country, orgSpec.CA.Province, orgSpec.CA.Locality, orgSpec.CA.OrganizationalUnit, orgSpec.CA.StreetAddress, orgSpec.CA.PostalCode)
+	var tlsCA *ca.CA
+	if *genUseRSA {
+		tlsCA, err = ca.NewRSACA(tlsCADir, orgName, "tls"+orgSpec.CA.CommonName, orgSpec.CA.Country, orgSpec.CA.Province, orgSpec.CA.Locality, orgSpec.CA.OrganizationalUnit, orgSpec.CA.StreetAddress, orgSpec.CA.PostalCode)
+	}else {
+		tlsCA, err = ca.NewCA(tlsCADir, orgName, "tls"+orgSpec.CA.CommonName, orgSpec.CA.Country, orgSpec.CA.Province, orgSpec.CA.Locality, orgSpec.CA.OrganizationalUnit, orgSpec.CA.StreetAddress, orgSpec.CA.PostalCode)
+	}
+
 	if err != nil {
 		fmt.Printf("Error generating tlsCA for org %s:\n%v\n", orgName, err)
 		os.Exit(1)
@@ -636,7 +648,7 @@ func generateNodes(baseDir string, nodes []NodeSpec, signCA *ca.CA, tlsCA *ca.CA
 	}
 }
 
-func generateOrdererOrg(baseDir string, orgSpec OrgSpec) {
+func generateOrdererOrg(baseDir string, orgSpec OrgSpec,genUseRSA *bool) {
 
 	orgName := orgSpec.Domain
 

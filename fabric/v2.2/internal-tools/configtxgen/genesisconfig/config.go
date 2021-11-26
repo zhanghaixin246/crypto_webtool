@@ -447,27 +447,47 @@ var cache = &configCache{
 // load loads the TopLevel config structure from configCache.
 // if not successful, it unmarshal a config file, and populate configCache
 // with marshaled TopLevel struct.
+//func (c *configCache) load(config *viper.Viper, configPath string) (*TopLevel, error) {
+//	c.mutex.Lock()
+//	defer c.mutex.Unlock()
+//
+//	conf := &TopLevel{}
+//	serializedConf, ok := c.cache[configPath]
+//	logger.Debug("Loading configuration from cache :%v", ok)
+//	if !ok {
+//		err := viperutil.EnhancedExactUnmarshal(config, conf)
+//		if err != nil {
+//			return nil, fmt.Errorf("Error unmarshaling config into struct: %s", err)
+//		}
+//
+//		serializedConf, err = json.Marshal(conf)
+//		if err != nil {
+//			return nil, err
+//		}
+//		//c.cache[configPath] = serializedConf
+//	}
+//
+//	err := json.Unmarshal(serializedConf, conf)
+//	if err != nil {
+//		return nil, err
+//	}
+//	return conf, nil
+//}
 func (c *configCache) load(config *viper.Viper, configPath string) (*TopLevel, error) {
 	c.mutex.Lock()
 	defer c.mutex.Unlock()
 
 	conf := &TopLevel{}
-	serializedConf, ok := c.cache[configPath]
-	logger.Debug("Loading configuration from cache :%v", ok)
-	if !ok {
-		err := viperutil.EnhancedExactUnmarshal(config, conf)
-		if err != nil {
-			return nil, fmt.Errorf("Error unmarshaling config into struct: %s", err)
-		}
-
-		serializedConf, err = json.Marshal(conf)
-		if err != nil {
-			return nil, err
-		}
-		c.cache[configPath] = serializedConf
+	err := viperutil.EnhancedExactUnmarshal(config, conf)
+	if err != nil {
+		return nil, fmt.Errorf("Error unmarshaling config into struct: %s", err)
 	}
 
-	err := json.Unmarshal(serializedConf, conf)
+	serializedConf, err := json.Marshal(conf)
+	if err != nil {
+		return nil, err
+	}
+	err = json.Unmarshal(serializedConf, conf)
 	if err != nil {
 		return nil, err
 	}

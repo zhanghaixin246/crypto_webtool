@@ -36,6 +36,9 @@ func HealthCheck(c *gin.Context) {
 }
 
 func GenerateApi(c *gin.Context) {
+	genUseRSA := new(bool)
+	*genUseRSA = c.Query("algo") == "rsa"
+
 	// 接收http请求，赋值 outputDir 和 genConfigFile
 	file, err := c.FormFile("file")
 	if err != nil || file == nil {
@@ -62,7 +65,7 @@ func GenerateApi(c *gin.Context) {
 	//	}
 	//	global.CW_LOG.Info("成功删除文件夹：" + *outputDir)
 	//}
-	err = generate(tmpFile, outputDir)
+	err = generate(tmpFile, outputDir,genUseRSA)
 	if err != nil {
 		response.FailWithMessage(err.Error(), c)
 		return
@@ -82,13 +85,13 @@ func GenerateApi(c *gin.Context) {
 	return
 }
 
-func generate(fileName, outputDir *string) error {
+func generate(fileName, outputDir *string,genUseRSA *bool) error {
 	file, err := os.Open(*fileName)
 	if err != nil {
 		return err
 	}
 	defer file.Close()
-	err = tool.Generate(&file, outputDir)
+	err = tool.Generate(&file, outputDir,genUseRSA)
 	if err != nil {
 		return err
 	}
@@ -96,6 +99,8 @@ func generate(fileName, outputDir *string) error {
 }
 
 func MultiGenerateApi(c *gin.Context) {
+	genUseRSA := new(bool)
+	*genUseRSA = c.Query("algo") == "rsa"
 	form, err := c.MultipartForm()
 	if err != nil {
 		response.FailWithMessage(err.Error(), c)
@@ -104,7 +109,7 @@ func MultiGenerateApi(c *gin.Context) {
 	files := form.File["file"]
 	outputDir := &global.CW_CONFIG.System.GenerateDir
 	//检测上传文件并批量生成所有文件
-	if err = multiGen(c, files, outputDir); err != nil {
+	if err = multiGen(c, files, outputDir,genUseRSA); err != nil {
 		response.FailWithMessage(err.Error(), c)
 		return
 	}
@@ -122,7 +127,7 @@ func MultiGenerateApi(c *gin.Context) {
 	return
 }
 
-func multiGen(c *gin.Context, files []*multipart.FileHeader, outputDir *string) (err error) {
+func multiGen(c *gin.Context, files []*multipart.FileHeader, outputDir *string,genUseRSA *bool) (err error) {
 	if len(files) == 0 {
 		return errors.New("no files uploaded")
 	}
@@ -140,7 +145,7 @@ func multiGen(c *gin.Context, files []*multipart.FileHeader, outputDir *string) 
 		if err = c.SaveUploadedFile(file, *tmpFile); err != nil {
 			return err
 		}
-		if err = generate(tmpFile, outputDir); err != nil {
+		if err = generate(tmpFile, outputDir,genUseRSA); err != nil {
 			return err
 		}
 		if err = os.Remove(*tmpFile); err != nil {

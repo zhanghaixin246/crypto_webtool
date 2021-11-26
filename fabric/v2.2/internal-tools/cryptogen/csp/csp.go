@@ -10,6 +10,7 @@ import (
 	"crypto/ecdsa"
 	"crypto/elliptic"
 	"crypto/rand"
+	"crypto/rsa"
 	"crypto/x509"
 	"encoding/asn1"
 	"encoding/pem"
@@ -97,6 +98,33 @@ func GeneratePrivateKey(keystorePath string) (*ecdsa.PrivateKey, error) {
 
 	return priv, err
 }
+
+// rsa
+func GenerateRSAPrivateKey(keystorePath string) (*rsa.PrivateKey, error) {
+
+	priv, err := rsa.GenerateKey(rand.Reader, 2048)
+	//priv, err := ecdsa.GenerateKey(elliptic.P256(), rand.Reader)
+	if err != nil {
+		return nil, errors.WithMessage(err, "failed to generate private key")
+	}
+
+	pkcs8Encoded := x509.MarshalPKCS1PrivateKey(priv)
+	//pkcs8Encoded, err := x509.MarshalPKCS1PrivateKey(priv)
+	//if err != nil {
+	//	return nil, errors.WithMessage(err, "failed to marshal private key")
+	//}
+
+	pemEncoded := pem.EncodeToMemory(&pem.Block{Type: "RSA PRIVATE KEY", Bytes: pkcs8Encoded})
+
+	keyFile := filepath.Join(keystorePath, "priv_sk")
+	err = ioutil.WriteFile(keyFile, pemEncoded, 0600)
+	if err != nil {
+		return nil, errors.WithMessagef(err, "failed to save private key to file %s", keyFile)
+	}
+
+	return priv, err
+}
+
 
 /**
 ECDSA signer implements the crypto.Signer interface for ECDSA keys.  The

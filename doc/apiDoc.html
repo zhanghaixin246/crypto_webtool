@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crypto_webtool</title>
+    <link rel="stylesheet" type="text/css" href="https://img.cdn.apipost.cn/docs/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://img.cdn.apipost.cn/docs/css/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://img.cdn.apipost.cn/docs/css/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://img.cdn.apipost.cn/docs/css/content.css">
+    <link rel="shortcut icon" href="https://img.cdn.apipost.cn/docs/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://img.cdn.apipost.cn/docs/css/github.css">
+    <script src="https://img.cdn.apipost.cn/docs/js/jquery-3.4.1.min.js"></script>
+    <script src="https://img.cdn.apipost.cn/docs/js/marked.min.js"></script>
+    <script src="https://img.cdn.apipost.cn/docs/js/template-web.js"></script>
+    <script src="https://img.cdn.apipost.cn/docs/js/highlight.js"></script>
+    <script src="https://img.cdn.apipost.cn/docs/js/clipboard.min.js"></script>
+</head>
+<body>
+    <div class="body">
+
+        <div class="doc-head">
+            <div class="left">
+                <a href="https://www.apipost.cn/" target="_blank" title="ApiPost接口与文档管理系统">
+                    <img src="images/logo.svg" alt="ApiPost接口与文档管理系统">
+                </a>
+            </div>
+            <div class="container">
+                <div class="container-left">
+                    <input type="text" class="search" placeholder="搜索目录接口">
+                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+                <div class="export" style="position: relative;
+                float: right;
+                margin: -16px 50px;">
+                    <div class="container-right">
+                        <a href="javascript:;">导出文档</a>
+                    </div>
+                    <div class="export_panel" style="display: block;">
+                        <ul>
+                            <li onclick="exportHtml()"><a href="javascript:;">导出HTML</a></li>
+                            <li onclick="exportMd()"><a href="javascript:;">导出MarkDown</a></li>
+                            <li onclick="exportWord()"><a href="javascript:;">导出Word</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-first">
+                <div class="title">crypto_webtool项目</div>
+                <div class="top target active" data-target_id="001">全局参数</div>
+                <div class="new">
+                    
+                    <div>
+                        <div class="target api" data-type="example" data-id="8c63351c-87c7-4e38-9e85-2d0b3a666dce" data-target_id="8c63351c-87c7-4e38-9e85-2d0b3a666dce">
+                            
+                            <span>
+                                <em class="GET" style="visibility: hidden;">GET</em>
+                                <span>健康检查</span>
+                            </span>
+                            <span></span>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div>
+                        <div class="target api" data-type="example" data-id="a8e790f9-b665-4de6-882d-498c57a00815" data-target_id="a8e790f9-b665-4de6-882d-498c57a00815">
+                            
+                            <span>
+                                <em class="POST" style="visibility: hidden;">POST</em>
+                                <span>cryptogen工具：生成秘钥材料generate</span>
+                            </span>
+                            <span></span>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div>
+                        <div class="target api" data-type="example" data-id="12c30c67-b257-47c3-b36f-a47f28c449d9" data-target_id="12c30c67-b257-47c3-b36f-a47f28c449d9">
+                            
+                            <span>
+                                <em class="POST" style="visibility: hidden;">POST</em>
+                                <span>cryptogen工具：批量生生成秘钥材料</span>
+                            </span>
+                            <span></span>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div>
+                        <div class="target api" data-type="example" data-id="3732f98f-06ff-4416-9ab8-f20e156887dc" data-target_id="3732f98f-06ff-4416-9ab8-f20e156887dc">
+                            
+                            <span>
+                                <em class="POST">POST</em>
+                                <span>configtxlator工具：在 protobuf 和 JSON 版本的 fabric 数据结构之间进行转换</span>
+                            </span>
+                            <span></span>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div>
+                        <div class="target api" data-type="example" data-id="bbc3aba2-2d41-434a-ada2-d2fe210067b2" data-target_id="bbc3aba2-2d41-434a-ada2-d2fe210067b2">
+                            
+                            <span>
+                                <em class="POST">POST</em>
+                                <span>configtxgen工具：写入创世区块</span>
+                            </span>
+                            <span></span>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div>
+                        <div class="target api" data-type="example" data-id="b8d0da84-df75-45e6-b511-5cd90bf2dd48" data-target_id="b8d0da84-df75-45e6-b511-5cd90bf2dd48">
+                            
+                            <span>
+                                <em class="POST">POST</em>
+                                <span>configtxgen工具：generate channel configuration transaction</span>
+                            </span>
+                            <span></span>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div>
+                        <div class="target api" data-type="example" data-id="7227c9e7-c3dd-4f39-82ad-19e1d389b3fa" data-target_id="7227c9e7-c3dd-4f39-82ad-19e1d389b3fa">
+                            
+                            <span>
+                                <em class="POST">POST</em>
+                                <span>configtxgen工具: 生成锚节点文件</span>
+                            </span>
+                            <span></span>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="advert_2" style="visibility: visible;">
+                    <a href="https://yqh.aliyun.com/live/cdncarnival?userCode=qqtrn1kd"><img src="https://img.cdn.apipost.cn/cdn/ad/aliyun/1560-480.jpg" alt=""></a>
+                </div>
+                <script type="text/html" id="template-target-sidebar-list-tpl">
+                    {{each list value}}
+                    <div>
+                        <div class="target {{value.target_type == 'folder' ? 'folder':'api'}}"
+                            data-type="{{value.target_type}}" data-id="{{value.target_id}}"
+                            data-target_id="{{value.target_id}}">
+                            {{if value.target_type == 'folder'}}
+                            <span>
+                                <span class="control">
+                                    {{if value.children}}
+                                    <i class="fa fa-angle-down"></i>
+                                    {{/if}}
+                                </span>
+                                <span>{{value.name}}</span>
+                            </span>
+                            {{else}}
+                            <span>
+                                <em
+                                    class="{{value.target_type == 'doc' ? 'DOC' : value.target_type == 'example' ? value.method : ''}}">{{value.target_type == 'doc' ? '文本' :  value.method == 'OPTIONS' ? 'OPT' : value.method == 'DELETE' ? 'DEL' : value.method == 'UNLINK' ? 'UNLNK' : value.method == 'UNLOCK' ? 'UNLCK' : value.method == 'PROPFIND' ? 'PROP' : value.method}}</em>
+                                <span>{{value.name}}</span>
+                            </span>
+                            <span></span>
+                            {{/if}}
+                        </div>
+                        {{if value.children!=null}}
+                        {{each value.children data}}
+                        {{set a=data["index"]=3}}
+                        {{include 'list1' data}}
+                        {{/each}}
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </script>
+                <script type="text/html" id="list1">
+                    <div>
+                        <div class="target {{target_type == 'folder' ? 'folder':'api'}}" data-type="{{target_type}}"
+                            data-id="{{target_id}}" data-target_id="{{target_id}}"
+                            style="padding-left:{{index * 15}}px">
+                            {{if target_type == 'folder'}}
+                            <span>
+                                <span class="control">
+                                    {{if children}}
+                                    <i class="fa fa-angle-down"></i>
+                                    {{/if}}
+                                </span>
+                                <span>{{name}}</span>
+                            </span>
+
+                            {{else}}
+                            <span>
+                                <em
+                                    class="{{target_type == 'doc' ? 'DOC' : target_type == 'example' ? method : ''}}">{{target_type == 'doc' ? '文本' :  method == 'OPTIONS' ? 'OPT' : method == 'DELETE' ? 'DEL' : method == 'UNLINK' ? 'UNLNK' : method == 'UNLOCK' ? 'UNLCK' : method == 'PROPFIND' ? 'PROP' : method}}</em>
+                                <span>{{name}}</span>
+                            </span>
+                            <span></span>
+                            {{/if}}
+                        </div>
+                        {{if children!=null}}
+                        {{each children data}}
+                        {{if index}}
+                        {{set b=data.index=index+1}}
+                        {{else}}
+                        {{set c=data["index"] = 3}}
+                        {{/if}}
+                        {{include 'list1' data}}
+                        {{/each}}
+                        {{/if}}
+                    </div>
+                </script>
+                <div class="bar"></div>
+            </div>
+            <div class="box-third">
+                <div class="preview-markdown">
+        <h2 class="top">
+            <p>
+            <span>crypto_webtool项目</span>
+            <span class="metadata">创建时间：2021-06-30</span>
+            </p>
+            
+            <div class="advert_1" style="visibility: visible;"><a href="https://www.aliyun.com/activity/daily/bestoffer?userCode=qqtrn1kd"><img src="https://img.cdn.apipost.cn/cdn/ad/aliyun/728-90.jpg" alt=""></a></div>
+            
+        </h2>
+        <div class="editor-preview desc">
+            <p>本文档是crypto_webtool项目的接口文档，以下为当前项目下的公共参数。</p>
+        </div>
+        <!-- <blockquote></blockquote> -->
+        <h3 class="title"><a href="javascript:;" class="maodian"></a> 环境变量
+            
+            <i class="fa fa-angle-down"></i>
+            
+        </h3>
+        
+        <div>
+            
+            <h4>默认环境</h4>
+            <table>
+                <tbody><tr>
+                    <th>变量名</th>
+                    <th>变量初始值</th>
+                    <th>变量当前值</th>
+                </tr>
+                
+            </tbody></table>
+            
+        </div>
+        
+        <h3 class="title"><a href="javascript:;" class="maodian"></a> 全局参数
+            
+            <i class="fa fa-angle-down"></i>
+            
+        </h3>
+        
+        <div>
+            
+            <h4>全局Header</h4>
+            <table>
+                <tbody><tr>
+                    <th>参数名</th>
+                    <th>参数值</th>
+                    <th>参数描述</th>
+                </tr>
+                
+                
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>暂无描述</td>
+                </tr>
+                
+                
+            </tbody></table>
+            
+            
+            <h4>全局Query</h4>
+            <table>
+                <tbody><tr>
+                    <th>参数名</th>
+                    <th>参数值</th>
+                    <th>参数描述</th>
+                </tr>
+                
+                
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>暂无描述</td>
+                </tr>
+                
+                
+            </tbody></table>
+            
+            
+            <h4>全局Body</h4>
+            <table>
+                <tbody><tr>
+                    <th>参数名</th>
+                    <th>参数值</th>
+                    <th>参数描述</th>
+                </tr>
+                
+                
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>暂无描述</td>
+                </tr>
+                
+                
+            </tbody></table>
+            
+            <!-- 
+             -->
+        </div>
+        
+        <div class="advert_3" style="height: 0;">
+            <div class="advert_3_1" style="visibility: visible;">
+                <a href="http://www.sina.com.cn"><img src="http://www.baidu.com" alt=""></a>
+            </div>
+            <div class="advert_3_2" style="visibility: visible;">
+                <a href="http://www.sina.com.cn"><img src="http://www.baidu.com" alt=""></a>
+            </div>
+            <div class="advert_3_3">
+            </div>
+        </div>
+        <div style="text-align: center;margin: 35px 0;">本文档由 <a href="https://docs.apipost.cn/" target="_blank" style="color:#378eef;">APIPOST接口调试与管理工具</a> 生成</div>
+    </div>
+                <div class="box-nav" style="display: none;">
+                    <ul class="api api_nav_tpl">
+
+                    </ul>
+
+                    <ul class="folder">
+                        <li class="cur nav-folder-btn" data-id="0"><a href="javascript:;">公共参数</a></li>
+                        <ul>
+                            <li class="nav-folder-btn" data-id="1"><a href="javascript:;">header参数及说明</a></li>
+                            <li class="nav-folder-btn" data-id="2"><a href="javascript:;">query参数及说明</a></li>
+                            <li class="nav-folder-btn" data-id="3"><a href="javascript:;">body参数及说明</a></li>
+                            <!-- <li class="nav-folder-btn" data-id="4"><a href="javascript:;">预执行脚本</a></li> -->
+                            <!-- <li class="nav-folder-btn" data-id="5"><a href="javascript:;">后执行脚本</a></li> -->
+                        </ul>
+                    </ul>
+                    <script type="text/html" id="template-nav-menu-tpl">
+                        <li class="cur nav-btn" data-id="0"><a href="javascript:;">基本信息</a></li>
+                        {{if request.header.parameter.length > 0 || request.query.parameter.length > 0 || request.resful.parameter.length > 0 || request.body.parameter.length>0 ||request.body.raw !=''}}
+                        <li class="nav-btn" data-id="1" style="display: block;"><a href="javascript:;">请求参数</a></li>
+                        {{else}}
+                        <li class="nav-btn" data-id="1" style="display: none;"><a href="javascript:;">请求参数</a></li>
+                        {{/if}}
+                        <ul>
+                            {{if request.header.parameter.length > 0}}
+                            <li class="nav-btn" data-id="2" style="display: block;"><a href="javascript:;">header参数及说明</a></li>
+                            {{else}}
+                            <li class="nav-btn" data-id="2" style="display: none;"><a href="javascript:;">header参数及说明</a></li>
+                            {{/if}}
+                            {{if request.query.parameter.length > 0}}
+                            <li class="nav-btn" data-id="3" style="display: block;"><a href="javascript:;">query参数及说明</a></li>
+                            {{else}}
+                            <li class="nav-btn" data-id="3" style="display: none;"><a href="javascript:;">query参数及说明</a></li>
+                            {{/if}}
+                            {{if request.resful.parameter.length > 0}}
+                            <li class="nav-btn" data-id="4" style="display: block;"><a href="javascript:;">路径参数及说明</a></li>
+                            {{else}}
+                            <li class="nav-btn" data-id="4" style="display: none;"><a href="javascript:;">路径参数及说明</a></li>
+                            {{/if}}
+                            {{if request.body.parameter.length>0 ||request.body.raw !='' }}
+                            <li class="nav-btn" data-id="5" style="display: block;"><a href="javascript:;">body参数及说明</a></li>
+                            {{else}}
+                            <li class="nav-btn" data-id="5" style="display: none;"><a href="javascript:;">body参数及说明</a></li>
+                            {{/if}}
+                        </ul>
+                        {{if response.success.raw || response.success.parameter.length > 0 || response.error.raw || response.error.parameter.length > 0}}
+                        <li class="nav-btn" data-id="6" style="display: block;"><a href="javascript:;">响应示例</a></li>
+                        {{else}}
+                        <li class="nav-btn" data-id="6" style="display: none;"><a href="javascript:;">响应示例</a></li>
+                        <!-- <ul>
+                            {{if response.success.raw || response.success.parameter.length > 0}}
+                            <li class="nav-btn" data-id="9"><a href="javascript:;">成功响应示例</a></li>
+                            {{/if}}
+
+                            {{if response.error.raw || response.error.parameter.length > 0}}
+                            <li class="nav-btn" data-id="10"><a href="javascript:;">失败响应示例</a></li>
+                            {{/if}}
+                        </ul> -->
+                        {{/if}}
+                        </script>
+                    <div class="advert_4" style="visibility: visible;">
+                        <a href="http://www.sina.com.cn"><img src="http://www.baidu.com" alt=""></a>
+                    </div>
+                    <div class="advert_5" style="visibility:hidden">
+                        <a href="#"><img src="" alt=""></a>
+                    </div>
+                </div>
+                <script type="text/html" id="template-example-doc-tpl">
+                    <h2 class="top">
+                        <p>
+                        <span>{{name}}</span>
+                        {{if target_type != 'folder'}}
+                        <button title="复制当前文档/接口数据到剪贴板" class="CopyCurrentData" data-clipboard-action="copy" data-clipboard-text="" data-target_id="{{target_id}}">复制接口</button>
+                        <a href="https://mp.apipost.cn/a/8c7b0ac975443421" title="什么是复制接口？" target="_blank"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
+                        {{/if}}
+                        <span class="metadata">更新时间：{{update_dtime}}</span>
+                        </p>
+                        {{if isFee}}
+                        <div class="advert_1" style='{{if advert_1_src == ""}} visibility:hidden {{/if}}'><a href="{{advert_1_dest}}"><img src="{{advert_1_src}}" alt=""></a></div>
+                        {{/if}}
+                    </h2>
+                    {{if request.description}}
+                    <div class="editor-preview desc markdown-section">
+                        {{@marked(request.description)}}
+                    </div>
+                    {{/if}}
+                    {{if target_type == 'example' || target_type == 'api'}}
+                    <h3 class="title"><a href="javascript:;" class="maodian"></a> 基本信息 <i class="fa fa-angle-down"></i>
+                    </h3>
+                    <ul class="editor-preview-info">
+                        <li><strong>接口状态：</strong> <code
+                                class="span {{mark}}">{{mark == 'developing' ? '开发中' : mark == 'complated' ? '已完成' : mark == 'modifying' ? '修改中' : '开发中'}}</code>
+                        </li>
+                        <li><strong>接口URL：</strong> <code class="span">{{request.url ? request.url : 'url为空...'}}</code>
+                        </li>
+                        <li><strong>请求方式：</strong> <code class="span">{{method}}</code> </li>
+                        <li><strong>Content-Type：</strong> <code class="span">{{request.body.mode}}</code></li>
+                    </ul>
+                    <h3 class="title" style="{{request.header.parameter.length > 0 || request.query.parameter.length > 0 || request.resful.parameter.length > 0 || request.body.parameter.length > 0 ||request.body.raw !='' ? 'display:block':'display:none'}}"><a href="javascript:;" class="maodian"></a> 请求参数 <i class="fa fa-angle-down"></i></h3>
+                    {{if request.header.parameter.length > 0 || request.query.parameter.length > 0 || request.resful.parameter.length > 0 || request.body.parameter.length > 0 ||request.body.raw !=''}}
+                    <div class="markdown-request">
+                        <h4 class="title" style="{{request.header.parameter.length > 0 ? 'display:block' : 'display:none'}}" ><a href="javascript:;" class="maodian"></a> Header参数及说明</h4>
+                        {{if request.header.parameter.length > 0}}
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>参数名</th>
+                                    <th>示例值</th>
+                                    <th>参数类型</th>
+                                    <th>是否必填</th>
+                                    <th>参数描述</th>
+                                </tr>
+                                {{each request.header.parameter item}}
+                                {{if item.key}}
+                                <tr>
+                                    <td>{{item.key}}</td>
+                                    <td>{{item.value}}</td>
+                                    <td>{{typeof item.field_type == 'string' ? item.field_type : ''}}</td>
+                                    <td>{{item.not_null == "1" ? '是' : '否'}}</td>
+                                    <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                                </tr>
+                                {{/if}}
+                                {{/each}}
+                            </table>
+                        </div>
+                        {{/if}}
+                       <h4 class="title" style="{{request.query.parameter.length > 0 ? 'display:block' : 'display:none'}}"><a href="javascript:;" class="maodian"></a> Query参数及说明</h4>
+                       {{if request.query.parameter.length > 0}}
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>参数名</th>
+                                    <th>示例值</th>
+                                    <th>参数类型</th>
+                                    <th>是否必填</th>
+                                    <th>参数描述</th>
+                                </tr>
+                                {{each request.query.parameter item}}
+                                {{if item.key}}
+                                <tr>
+                                    <td>{{item.key}}</td>
+                                    <td>{{item.value}}</td>
+                                    <td>{{typeof item.field_type == 'string' ? item.field_type : ''}}</td>
+                                    <td>{{item.not_null == "1" ? '是' : '否'}}</td>
+                                    <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                                </tr>
+                                {{/if}}
+                                {{/each}}
+                            </table>
+                        </div>
+                        {{/if}}
+                        <h4 class="title" style="{{request.resful.parameter.length > 0 ? 'display:block' : 'display:none'}}"><a href="javascript:;" class="maodian"></a> 路径参数及说明</h4>
+                        {{if request.resful.parameter.length > 0}}
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>参数名</th>
+                                    <th>示例值</th>
+                                    <th>参数类型</th>
+                                    <th>是否必填</th>
+                                    <th>参数描述</th>
+                                </tr>
+
+                                {{each request.resful.parameter item}}
+                                {{if item.key}}
+                                <tr>
+                                    <td>{{item.key}}</td>
+                                    <td>{{item.value}}</td>
+                                    <td>{{typeof item.field_type == 'string' ? item.field_type : ''}}</td>
+                                    <td>{{item.not_null == "1" ? '是' : '否'}}</td>
+                                    <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                                </tr>
+                                {{/if}}
+                                {{/each}}
+                            </table>
+                        </div>
+                        {{/if}}
+                        <h4 class="title" style="{{request.body.parameter.length > 0 || request.body.raw !='' ? 'display:block' : 'display:none'}}"><a href="javascript:;" class="maodian"></a> body参数及说明</h4>
+                        {{if request.body.parameter.length > 0 ||request.body.raw !='' }}
+                        {{if request.body.mode == 'form-data' || request.body.mode=="urlencoded" || request.body.mode == 'multipart/form-data' || request.body.mode == 'application/x-www-form-urlencoded'}}
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>参数名</th>
+                                    <th>示例值</th>
+                                    <th>参数类型</th>
+                                    <th>是否必填</th>
+                                    <th>参数描述</th>
+                                </tr>
+                                {{each request.body.parameter item}}
+                                {{if item.key}}
+                                <tr>
+                                    <td>{{item.key}}</td>
+                                    <td>{{item.value}}</td>
+                                    <td>{{typeof item.field_type == 'string' ? item.field_type : ''}}
+                                    </td>
+                                    <td>{{item.not_null == "1" ? '是' : '否'}}</td>
+                                    <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                                </tr>
+                                {{/if}}
+                                {{/each}}
+                            </table>
+                        </div>
+                        {{else}}
+                        <div class="editor-preview">
+                            <pre><code class="hljs json">{{request.body.raw}}</code></pre>
+                        </div>
+                        {{if request.body.raw_para.length > 0}}
+                        <h4><a href="javascript:;" class="maodian"></a> 字段描述</h4>
+                        <table>
+                            <tr>
+                                <th>参数名</th>
+                                <th>示例值</th>
+                                <th>参数类型</th>
+                                <th>是否必填</th>
+                                <th>参数描述</th>
+                            </tr>
+                            {{each request.body.raw_para item}}
+                            {{if item.key}}
+                            <tr>
+                                <td>{{item.key}}</td>
+                                <td>{{item.value}}</td>
+                                <td>{{typeof item.field_type == 'string' ? item.field_type : ''}}</td>
+                                <td>{{item.not_null == "1" ? '是' : '否'}}</td>
+                                <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                            </tr>
+                            {{/if}}
+                            {{/each}}
+                        </table>
+                        {{/if}}
+                        {{/if}}
+                        {{/if}}
+                        <!-- {{if request.event.pre_script != ''}}
+                        <h4 class="title"><a href="javascript:;" class="maodian"></a> 预执行脚本</h4>
+                        <div class="editor-preview">
+                            <pre><code class="hljs">{{request.event.pre_script}}</code></pre>
+                        </div>
+                        {{/if}}
+                        {{if request.event.test != ""}}
+                        <h4 class="title"><a href="javascript:;" class="maodian"></a> 后执行脚本</h4>
+                        <div class="editor-preview">
+                            <pre><code class="hljs">{{request.event.test}}</code></pre>
+                        </div>
+                        {{/if}} -->
+                    </div>
+                    {{/if}}
+                    <!--respond-->
+                    <h3 class="title" style="{{response.success.raw || response.success.parameter.length > 0 || response.error.raw || response.error.parameter.length > 0 ? 'display:block':'display:none'}}"><a href="javascript:;" class="maodian"></a> 响应示例<i class="fa fa-angle-down"></i>
+                    </h3>
+                    {{if response.success.raw || response.success.parameter.length > 0 || response.error.raw || response.error.parameter.length > 0}}
+                    <div class="markdown-response">
+                        {{if response.success.raw || response.success.parameter.length > 0}}
+                        <h4 class="title"><a href="javascript:;" class="maodian"></a> 成功响应示例</h4>
+                        <div class="editor-preview">
+                            <pre><code class="hljs json">{{response.success.raw}}</code></pre>
+                        </div>
+                        {{if response.success.parameter.length > 0}}
+                        <h4><a href="javascript:;" class="maodian"></a> 字段描述</h4>
+                        <table>
+                            <tr>
+                                <th>参数名</th>
+                                <th>示例值</th>
+                                <th>参数类型</th>
+                                <th>参数描述</th>
+                            </tr>
+                            {{each response.success.parameter item}}
+                            <tr>
+                                <td>{{item.key}}</td>
+                                <td>{{item.value}}</td>
+                                <td>{{typeof item.field_type == 'string' ? item.field_type : ''}}</td>
+                                <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                            </tr>
+                            {{/each}}
+                        </table>
+                        {{/if}}
+                        {{/if}}
+                        {{if response.error.raw || response.error.parameter.length > 0}}
+                        <h4 class="title"><a href="javascript:;" class="maodian"></a> 失败响应示例</h4>
+                        <div class="editor-preview">
+                            <pre><code class="hljs json">{{response.error.raw}}</code></pre>
+                        </div>
+                        {{if response.error.parameter.length > 0}}
+                        <h4><a href="javascript:;" class="maodian"></a> 字段描述</h4>
+                        <table>
+                            <tr>
+                                <th>参数名</th>
+                                <th>示例值</th>
+                                <th>参数类型</th>
+                                <th>参数描述</th>
+                            </tr>
+                            {{each response.error.parameter item}}
+                            <tr>
+                                <td>{{item.key}}</td>
+                                <td>{{item.value}}</td>
+                                <td>{{typeof item.field_type == 'string' ? item.field_type : ''}}</td>
+                                <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                            </tr>
+                            {{/each}}
+                        </table>
+                        {{/if}}
+                        {{/if}}
+                    </div>
+                    {{/if}}
+                    {{else if target_type == 'folder'}}
+                    <h3 class="title"><a href="javascript:;" class="maodian"></a> 公共参数<i class="fa fa-angle-down"></i>
+                    </h3>
+                    <div class="markdown-request">
+                        <h4 class="title"><a href="javascript:;" class="maodian"></a> Header参数及说明</h4>
+                        <div>
+                            <table class="header">
+                                <tr>
+                                    <th>参数名</th>
+                                    <th>示例值</th>
+                                    <th>参数类型</th>
+                                    <th>参数描述</th>
+                                </tr>
+                                {{if request.header.length > 0}}
+                                {{each request.header item}}
+                                {{if item.key}}
+                                <tr>
+                                    <td>{{item.key}}</td>
+                                    <td>{{item.value}}</td>
+                                    <td>{{typeof item.field_type == 'string' ? item.field_type : ''}}</td>
+                                    <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                                </tr>
+                                {{/if}}
+                                {{/each}}
+                                {{/if}}
+                            </table>
+                        </div>
+                        <h4 class="title"><a href="javascript:;" class="maodian"></a> Query参数及说明</h4>
+                        <div>
+                            <table class="query">
+                                <tr>
+                                    <th>参数名</th>
+                                    <th>示例值</th>
+                                    <th>参数类型</th>
+                                    <th>参数描述</th>
+                                </tr>
+                                {{each request.query item}}
+                                {{if item.key}}
+                                <tr>
+                                    <td>{{item.key}}</td>
+                                    <td>{{item.value}}</td>
+                                    <td>{{typeof item.field_type == 'string' ? item.field_type : ''}}</td>
+                                    <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                                </tr>
+                                {{/if}}
+                                {{/each}}
+                            </table>
+                        </div>
+                        <h4 class="title"><a href="javascript:;" class="maodian"></a> Body参数及说明</h4>
+                        <div>
+                            <table class="body">
+                                <tr>
+                                    <th>参数名</th>
+                                    <th>示例值</th>
+                                    <th>参数类型</th>
+                                    <th>参数描述</th>
+                                </tr>
+                                {{each request.body item}}
+                                {{if item.key}}
+                                <tr>
+                                    <td>{{item.key}}</td>
+                                    <td>{{item.value}}</td>
+                                    <td>{{typeof item.field_type == 'string' ? item.field_type : ''}}</td>
+                                    <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                                </tr>
+                                {{/if}}
+                                {{/each}}
+                            </table>
+                        </div>
+                        <!-- {{if script.pre_script != ''}}
+                        <h4 class="title"><a href="javascript:;" class="maodian"></a> 预执行脚本</h4>
+                        <div class="editor-preview">
+                            <pre><code class="hljs">{{script.pre_script}}</code></pre>
+                        </div>
+                        {{/if}}
+                        {{if script.test != "" }}
+                        <h4 class="title"><a href="javascript:;" class="maodian"></a> 后执行脚本</h4>
+                        <div class="editor-preview">
+                            <pre><code class="hljs">{{script.test}}</code></pre>
+                        </div>
+                        {{/if}} -->
+                    </div>
+                    <!--respond-->
+                    {{/if}}
+                    <div class="advert_3" style="height: 0;">
+                        <div class="advert_3_1" style='{{if advert_3_1_src == ""}}visibility:hidden{{/if}}'>
+                            <a href="{{advert_3_1_dest}}"><img src="{{advert_3_1_src}}" alt=""></a>
+                        </div>
+                        <div class="advert_3_2" style='{{if advert_3_2_src == ""}}visibility:hidden{{/if}}'>
+                            <a href="{{advert_3_2_dest}}"><img src="{{advert_3_2_src}}" alt=""></a>
+                        </div>
+                        <div class="advert_3_3">
+                        </div>
+                    </div>
+                    <div style="text-align: center;margin: 35px 0;height: 50px;">本文档由 <a href="https://docs.apipost.cn/" target="_blank" style="color:#378eef;">APIPOST接口调试与管理工具</a> 生成</div>
+                </script>
+            </div>
+        </div>
+
+    
+    </div>
+<script type="text/html" id="golbal-env-tpl">
+        <h2 class="top">
+            <p>
+             <span>{{vars.name}}</span>
+            <span class="metadata">创建时间：{{vars.createTime}}</span>
+            </p>
+        </h2>
+        <div class="editor-preview desc">
+            <p>本文档是{{vars.name}}的接口文档，以下为当前项目下的公共参数。</p>
+        </div>
+        <h3 class="title"><a href="javascript:;" class="maodian"></a> 环境变量 <i class="fa fa-angle-down"></i></h3>
+        {{if envs.length > 0}}
+        <div>
+            {{each envs item}}
+            <h4>{{item.name}}</h4>
+            <table>
+                <tr>
+                    <th>变量名</th>
+                    <th>变量初始值</th>
+                    <th>变量当前值</th>
+                </tr>
+                {{each item.list value key}}
+                <tr>
+                    <td>{{key}}</td>
+                    <td>{{value.value}}</td>
+                    <td>{{value.current_value}}</td>
+                </tr>
+                {{/each}}
+            </table>
+            {{/each}}
+        </div>
+        {{else}}
+        <div style="text-align: center;"><img src="https://img.cdn.apipost.cn/docs/images/empty.svg" style="width: 100px;margin:20px auto 20px;">暂无环境</div>
+        {{/if}}
+        <h3 class="title"><a href="javascript:;" class="maodian"></a> 全局参数
+            {{if vars.request.header.length > 0 ||vars.request.query.length > 0 || vars.request.body.length > 0}}
+            <i class="fa fa-angle-down"></i>
+            {{/if}}
+        </h3>
+        {{if vars.request.header.length > 0 ||vars.request.query.length > 0 || vars.request.body.length > 0}}
+        <div>
+            {{if  vars.request.header.length > 0}}
+            <h4>全局Header</h4>
+            <table>
+                <tr>
+                    <th>参数名</th>
+                    <th>参数值</th>
+                    <th>参数描述</th>
+                </tr>
+                {{if vars.request.header.length > 0}}
+                {{each vars.request.header item}}
+                <tr>
+                    <td>{{item.key}}</td>
+                    <td>{{item.value}}</td>
+                    <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                </tr>
+                {{/each}}
+                {{else}}
+                <td colspan="3" style="text-align:center">暂无数据</td>
+                {{/if}}
+            </table>
+            {{/if}}
+            {{if vars.request.header.length > 0}}
+            <h4>全局Query</h4>
+            <table>
+                <tr>
+                    <th>参数名</th>
+                    <th>参数值</th>
+                    <th>参数描述</th>
+                </tr>
+                {{if vars.request.query.length > 0}}
+                {{each vars.request.query item}}
+                <tr>
+                    <td>{{item.key}}</td>
+                    <td>{{item.value}}</td>
+                    <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                </tr>
+                {{/each}}
+                {{else}}
+                <tr>
+                    <td colspan="3" style="text-align:center">暂无数据</td>
+                </tr>
+                {{/if}}
+            </table>
+            {{/if}}
+            {{if vars.request.header.length > 0}}
+            <h4>全局Body</h4>
+            <table>
+                <tr>
+                    <th>参数名</th>
+                    <th>参数值</th>
+                    <th>参数描述</th>
+                </tr>
+                {{if vars.request.body.length > 0}}
+                {{each vars.request.body item}}
+                <tr>
+                    <td>{{item.key}}</td>
+                    <td>{{item.value}}</td>
+                    <td>{{item.description == '' ? '暂无描述' : item.description }}</td>
+                </tr>
+                {{/each}}
+                {{else}}
+                <td colspan="3" style="text-align:center">暂无数据</td>
+                {{/if}}
+            </table>
+            {{/if}}
+        </div>
+        {{else}}
+        <div style="text-align: center;"><img src="https://img.cdn.apipost.cn/docs/images/empty.svg" style="width: 100px;margin:20px auto 20px;">暂无参数</div>
+        {{/if}}
+        <div class="advert_3">
+            <div class="advert_3_1">
+                <a href="#"><img src="" alt=""></a>
+            </div>
+            <div class="advert_3_2">
+                <a href="#"><img src="" alt=""></a>
+            </div>
+            <div class="advert_3_3">
+            </div>
+        </div>
+    </script><script>
+    template.defaults.imports.marked = function (md) {
+            return marked(md, {
+                breaks: true
+            });
+        }
+        function dragControllerDiv(resize, left, mid, box) {
+            for (let i = 0; i < resize.length; i++) {
+                // 鼠标按下事件
+                resize[i].onmousedown = function (e) {
+                    //颜色改变提醒
+                    resize[i].style.borderColor = "#9d9d9d";
+                    var startX = e.clientX;
+                    resize[i].left = resize[i].offsetLeft;
+                    // 鼠标拖动事件
+                    document.onmousemove = function (e) {
+                        var endX = e.clientX;
+                        var moveLen = resize[i].left + (endX - startX); // （endx-startx）=移动的距离。resize[i].left+移动的距离=左边区域最后的宽度
+                        var maxT = box[i].clientWidth - resize[i].offsetWidth; // 容器宽度 - 左边区域的宽度 = 右边区域的宽度
+
+                        if (moveLen < 300) moveLen = 300; // 左边区域的最小宽度为300px
+                        if (moveLen > maxT - 150) moveLen = maxT - 150; //右边区域最小宽度为150px
+
+                        resize[i].style.left = moveLen; // 设置左侧区域的宽度
+                        $('.title.target').css({maxWidth:moveLen+'px'})
+                        for (let j = 0; j < left.length; j++) {
+                            left[j].style.width = moveLen + "px";
+                            mid[j].style.width = box[i].clientWidth - moveLen - 10 + "px";
+                        }
+                    };
+                    // 鼠标松开事件
+                    document.onmouseup = function (evt) {
+                        //颜色恢复
+                        resize[i].style.borderColor = "#d6d6d6";
+                        document.onmousemove = null;
+                        document.onmouseup = null;
+                        resize[i].releaseCapture && resize[i].releaseCapture(); //当你不在需要继续获得鼠标消息就要应该调用ReleaseCapture()释放掉
+                    };
+                    resize[i].setCapture && resize[i].setCapture(); //该函数在属于当前线程的指定窗口里设置鼠标捕获
+                    return false;
+                };
+            }
+        }
+    let timer = null
+    let arr = '%7B%22data%22:%7B%22list%22:%5B%7B%22target_id%22:%228c63351c-87c7-4e38-9e85-2d0b3a666dce%22,%22parent_id%22:%2286d160d9-7d89-4328-84aa-a30d36e73c09%22,%22project_id%22:%22648828a4-cb41-4d47-96f2-d7e25452375f%22,%22mark%22:%22complated%22,%22target_type%22:%22example%22,%22name%22:%22%E5%81%A5%E5%BA%B7%E6%A3%80%E6%9F%A5%22,%22method%22:%22GET%22,%22sort%22:0,%22type_sort%22:%220%22,%22update_day%22:%221625673600%22,%22update_dtime%22:%222021-07-08%2016:38:26%22,%22bak_id%22:%220%22,%22version%22:%2217%22,%22is_publish%22:%220%22,%22publisher%22:%220%22,%22publish_dtime%22:%220%22,%22hash%22:%22%22,%22is_changed%22:%22-1%22,%22create_dtime%22:%221616639819%22,%22is_doc%22:%220%22,%22url%22:%22http://localhost:8083/%22,%22request%22:%7B%22url%22:%22http://localhost:8083/%22,%22description%22:%22%22,%22auth%22:%7B%22type%22:%22noauth%22,%22kv%22:%7B%22key%22:%22%22,%22value%22:%22%22%7D,%22bearer%22:%7B%22key%22:%22%22%7D,%22basic%22:%7B%22username%22:%22%22,%22password%22:%22%22%7D%7D,%22body%22:%7B%22mode%22:%22none%22,%22parameter%22:%5B%5D,%22raw%22:%22%22,%22raw_para%22:%5B%5D%7D,%22event%22:%7B%22pre_script%22:%22%22,%22test%22:%22%22%7D,%22header%22:%7B%22parameter%22:%5B%5D%7D,%22query%22:%7B%22parameter%22:%5B%5D%7D,%22cookie%22:%7B%22parameter%22:%5B%5D%7D,%22resful%22:%7B%22parameter%22:%5B%5D%7D%7D,%22response%22:%7B%22success%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D,%22error%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D%7D%7D,%7B%22target_id%22:%22a8e790f9-b665-4de6-882d-498c57a00815%22,%22parent_id%22:%227543f64f-8bfd-4cb9-9d52-5bf7db1498e2%22,%22project_id%22:%22648828a4-cb41-4d47-96f2-d7e25452375f%22,%22mark%22:%22developing%22,%22target_type%22:%22example%22,%22name%22:%22cryptogen%E5%B7%A5%E5%85%B7%EF%BC%9A%E7%94%9F%E6%88%90%E7%A7%98%E9%92%A5%E6%9D%90%E6%96%99generate%22,%22method%22:%22POST%22,%22sort%22:1,%22type_sort%22:%220%22,%22update_day%22:%221627574400%22,%22update_dtime%22:%222021-07-30%2009:39:17%22,%22bak_id%22:%220%22,%22version%22:%2213%22,%22is_publish%22:%220%22,%22publisher%22:%220%22,%22publish_dtime%22:%220%22,%22hash%22:%22%22,%22is_changed%22:%22-1%22,%22create_dtime%22:%221616639819%22,%22is_doc%22:%220%22,%22url%22:%22http://localhost:8083/cryptogen/generate?algo=%22,%22request%22:%7B%22url%22:%22http://localhost:8083/cryptogen/generate?algo=%22,%22description%22:%22%E9%BB%98%E8%AE%A4%E7%94%9F%E6%88%90ECDSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%81%E4%B9%A6%E5%92%8C%E7%A7%98%E9%92%A5%EF%BC%9Burl%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0algo=rsa%E6%97%B6%EF%BC%8C%E7%94%9F%E6%88%90RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%81%E4%B9%A6%E5%92%8C%E7%A7%98%E9%92%A5%22,%22auth%22:%7B%22type%22:%22noauth%22,%22kv%22:%7B%22key%22:%22%22,%22value%22:%22%22%7D,%22bearer%22:%7B%22key%22:%22%22%7D,%22basic%22:%7B%22username%22:%22%22,%22password%22:%22%22%7D%7D,%22body%22:%7B%22mode%22:%22form-data%22,%22parameter%22:%5B%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22file%22,%22type%22:%22File%22,%22not_null%22:%221%22,%22field_type%22:%22%22,%22value%22:%22/Users/zhang/go/src/fabric-samples/test-network/organizations/cryptogen/cryptogen-config.yaml%22%7D%5D,%22raw%22:%22%22,%22raw_para%22:%5B%5D%7D,%22event%22:%7B%22pre_script%22:%22%22,%22test%22:%22%22%7D,%22header%22:%7B%22parameter%22:%5B%5D%7D,%22query%22:%7B%22parameter%22:%5B%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22algo%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22%22%7D%5D%7D,%22cookie%22:%7B%22parameter%22:%5B%5D%7D,%22resful%22:%7B%22parameter%22:%5B%5D%7D%7D,%22response%22:%7B%22success%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D,%22error%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D%7D%7D,%7B%22target_id%22:%2212c30c67-b257-47c3-b36f-a47f28c449d9%22,%22parent_id%22:%22957a25a7-8e7e-42ea-a503-c8543a05edba%22,%22project_id%22:%22648828a4-cb41-4d47-96f2-d7e25452375f%22,%22mark%22:%22developing%22,%22target_type%22:%22example%22,%22name%22:%22cryptogen%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%89%B9%E9%87%8F%E7%94%9F%E7%94%9F%E6%88%90%E7%A7%98%E9%92%A5%E6%9D%90%E6%96%99%22,%22method%22:%22POST%22,%22sort%22:2,%22type_sort%22:%220%22,%22update_day%22:%221627574400%22,%22update_dtime%22:%222021-07-30%2009:39:28%22,%22bak_id%22:%220%22,%22version%22:%229%22,%22is_publish%22:%220%22,%22publisher%22:%220%22,%22publish_dtime%22:%220%22,%22hash%22:%22%22,%22is_changed%22:%22-1%22,%22create_dtime%22:%221616639819%22,%22is_doc%22:%220%22,%22url%22:%22http://localhost:8083/cryptogen/multi-generate?algo=%22,%22request%22:%7B%22url%22:%22http://localhost:8083/cryptogen/multi-generate?algo=%22,%22description%22:%22%E9%BB%98%E8%AE%A4%E7%94%9F%E6%88%90ECDSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%81%E4%B9%A6%E5%92%8C%E7%A7%98%E9%92%A5%EF%BC%9Burl%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0algo=rsa%E6%97%B6%EF%BC%8C%E7%94%9F%E6%88%90RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%81%E4%B9%A6%E5%92%8C%E7%A7%98%E9%92%A5%22,%22auth%22:%7B%22type%22:%22noauth%22,%22kv%22:%7B%22key%22:%22%22,%22value%22:%22%22%7D,%22bearer%22:%7B%22key%22:%22%22%7D,%22basic%22:%7B%22username%22:%22%22,%22password%22:%22%22%7D%7D,%22body%22:%7B%22mode%22:%22form-data%22,%22parameter%22:%5B%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22file%22,%22type%22:%22File%22,%22not_null%22:%221%22,%22field_type%22:%22%22,%22value%22:%22/Users/zhang/go/src/fabric-samples/test-network/organizations/cryptogen/crypto-config-orderer.yaml%22%7D,%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22file%22,%22type%22:%22File%22,%22not_null%22:%221%22,%22field_type%22:%22%22,%22value%22:%22/Users/zhang/go/src/fabric-samples/test-network/organizations/cryptogen/crypto-config-org1.yaml%22%7D,%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22file%22,%22type%22:%22File%22,%22not_null%22:%221%22,%22field_type%22:%22%22,%22value%22:%22/Users/zhang/go/src/fabric-samples/test-network/organizations/cryptogen/crypto-config-org2.yaml%22%7D%5D,%22raw%22:%22%22,%22raw_para%22:%5B%5D%7D,%22event%22:%7B%22pre_script%22:%22%22,%22test%22:%22%22%7D,%22header%22:%7B%22parameter%22:%5B%5D%7D,%22query%22:%7B%22parameter%22:%5B%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22algo%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22%22%7D%5D%7D,%22cookie%22:%7B%22parameter%22:%5B%5D%7D,%22resful%22:%7B%22parameter%22:%5B%5D%7D%7D,%22response%22:%7B%22success%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D,%22error%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D%7D%7D,%7B%22target_id%22:%223732f98f-06ff-4416-9ab8-f20e156887dc%22,%22parent_id%22:%22abad8454-4523-4758-8208-e4ccf02e5786%22,%22project_id%22:%22648828a4-cb41-4d47-96f2-d7e25452375f%22,%22mark%22:%22developing%22,%22target_type%22:%22example%22,%22name%22:%22configtxlator%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%9C%A8%20protobuf%20%E5%92%8C%20JSON%20%E7%89%88%E6%9C%AC%E7%9A%84%20fabric%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E9%97%B4%E8%BF%9B%E8%A1%8C%E8%BD%AC%E6%8D%A2%22,%22method%22:%22POST%22,%22sort%22:3,%22type_sort%22:%220%22,%22update_day%22:%221625673600%22,%22update_dtime%22:%222021-07-08%2016:38:35%22,%22bak_id%22:%220%22,%22version%22:%227%22,%22is_publish%22:%220%22,%22publisher%22:%220%22,%22publish_dtime%22:%220%22,%22hash%22:%22%22,%22is_changed%22:%22-1%22,%22create_dtime%22:%221616639819%22,%22is_doc%22:%220%22,%22url%22:%22http://localhost:8083/protolator/decode?msgName=abc%22,%22request%22:%7B%22url%22:%22http://localhost:8083/protolator/decode?msgName=abc%22,%22description%22:%22%22,%22auth%22:%7B%22type%22:%22noauth%22,%22kv%22:%7B%22key%22:%22%22,%22value%22:%22%22%7D,%22bearer%22:%7B%22key%22:%22%22%7D,%22basic%22:%7B%22username%22:%22%22,%22password%22:%22%22%7D%7D,%22body%22:%7B%22mode%22:%22none%22,%22parameter%22:%5B%5D,%22raw%22:%22%22,%22raw_para%22:%5B%5D%7D,%22event%22:%7B%22pre_script%22:%22%22,%22test%22:%22%22%7D,%22header%22:%7B%22parameter%22:%5B%5D%7D,%22query%22:%7B%22parameter%22:%5B%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22msgName%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22abc%22%7D%5D%7D,%22cookie%22:%7B%22parameter%22:%5B%5D%7D,%22resful%22:%7B%22parameter%22:%5B%5D%7D%7D,%22response%22:%7B%22success%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D,%22error%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D%7D%7D,%7B%22target_id%22:%22bbc3aba2-2d41-434a-ada2-d2fe210067b2%22,%22parent_id%22:%22455d2dac-3b6d-4ada-baa1-aa7b55e6149e%22,%22project_id%22:%22648828a4-cb41-4d47-96f2-d7e25452375f%22,%22mark%22:%22developing%22,%22target_type%22:%22example%22,%22name%22:%22configtxgen%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%86%99%E5%85%A5%E5%88%9B%E4%B8%96%E5%8C%BA%E5%9D%97%22,%22method%22:%22POST%22,%22sort%22:4,%22type_sort%22:%220%22,%22update_day%22:%221625673600%22,%22update_dtime%22:%222021-07-08%2016:38:38%22,%22bak_id%22:%220%22,%22version%22:%2212%22,%22is_publish%22:%220%22,%22publisher%22:%220%22,%22publish_dtime%22:%220%22,%22hash%22:%22%22,%22is_changed%22:%22-1%22,%22create_dtime%22:%221616639819%22,%22is_doc%22:%220%22,%22url%22:%22http://localhost:8083/configtxgen/profile?outputBlock=genesis12.block&profile=TwoOrgsOrdererGenesis&channelID=system-channel%22,%22request%22:%7B%22url%22:%22http://localhost:8083/configtxgen/profile?outputBlock=genesis12.block&profile=TwoOrgsOrdererGenesis&channelID=system-channel%22,%22description%22:%22%E5%8E%9F%E5%A7%8B%E5%91%BD%E4%BB%A4%EF%BC%9A%5Cn%5Ct%5Ct%5Ct%5Ct%5Ct%5Ct%5Ctconfigtxgen%20-profile%20TwoOrgsOrdererGenesis%20-channelID%20system-channel%20-outputBlock%20./system-genesis-block/genesis123.block%5CnoutputBlock%E5%BF%85%E9%A1%BB%E4%BB%A5genesis%E5%BC%80%E5%A4%B4%EF%BC%9B%22,%22auth%22:%7B%22type%22:%22noauth%22,%22kv%22:%7B%22key%22:%22%22,%22value%22:%22%22%7D,%22bearer%22:%7B%22key%22:%22%22%7D,%22basic%22:%7B%22username%22:%22%22,%22password%22:%22%22%7D%7D,%22body%22:%7B%22mode%22:%22form-data%22,%22parameter%22:%5B%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22file%22,%22type%22:%22File%22,%22not_null%22:%221%22,%22field_type%22:%22%22,%22value%22:%22/Users/zhang/go/src/fabric-samples/test-network/configtx/configtx.yaml%22%7D%5D,%22raw%22:%22%22,%22raw_para%22:%5B%5D%7D,%22event%22:%7B%22pre_script%22:%22%22,%22test%22:%22%22%7D,%22header%22:%7B%22parameter%22:%5B%5D%7D,%22query%22:%7B%22parameter%22:%5B%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22outputBlock%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22genesis12.block%22%7D,%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22profile%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22TwoOrgsOrdererGenesis%22%7D,%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22channelID%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22system-channel%22%7D%5D%7D,%22cookie%22:%7B%22parameter%22:%5B%5D%7D,%22resful%22:%7B%22parameter%22:%5B%5D%7D%7D,%22response%22:%7B%22success%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D,%22error%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D%7D%7D,%7B%22target_id%22:%22b8d0da84-df75-45e6-b511-5cd90bf2dd48%22,%22parent_id%22:%226641bc55-b902-4c30-b1d2-aa35a2a55ae9%22,%22project_id%22:%22648828a4-cb41-4d47-96f2-d7e25452375f%22,%22mark%22:%22developing%22,%22target_type%22:%22example%22,%22name%22:%22configtxgen%E5%B7%A5%E5%85%B7%EF%BC%9Agenerate%20channel%20configuration%20transaction%22,%22method%22:%22POST%22,%22sort%22:5,%22type_sort%22:%220%22,%22update_day%22:%221625673600%22,%22update_dtime%22:%222021-07-08%2016:38:41%22,%22bak_id%22:%220%22,%22version%22:%225%22,%22is_publish%22:%220%22,%22publisher%22:%220%22,%22publish_dtime%22:%220%22,%22hash%22:%22%22,%22is_changed%22:%22-1%22,%22create_dtime%22:%221616639819%22,%22is_doc%22:%220%22,%22url%22:%22http://localhost:8083/configtxgen/profile?outputCreateChannelTx=mychannel.tx&profile=TwoOrgsChannel&channelID=mychannel%22,%22request%22:%7B%22url%22:%22http://localhost:8083/configtxgen/profile?outputCreateChannelTx=mychannel.tx&profile=TwoOrgsChannel&channelID=mychannel%22,%22description%22:%22%E5%8E%9F%E5%A7%8B%E5%91%BD%E4%BB%A4%EF%BC%9A%5Cn%5Ct%5Ct%5Ct%5Ct%5Ct%5Ct%5Ctconfigtxgen%20-profile%20TwoOrgsChannel%20-outputCreateChannelTx%20./channel-artifacts/mychannel.tx%20-channelID%20mychannel%22,%22auth%22:%7B%22type%22:%22noauth%22,%22kv%22:%7B%22key%22:%22%22,%22value%22:%22%22%7D,%22bearer%22:%7B%22key%22:%22%22%7D,%22basic%22:%7B%22username%22:%22%22,%22password%22:%22%22%7D%7D,%22body%22:%7B%22mode%22:%22form-data%22,%22parameter%22:%5B%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22file%22,%22type%22:%22File%22,%22not_null%22:%221%22,%22field_type%22:%22%22,%22value%22:%22/Users/zhang/go/src/fabric-samples/test-network/configtx/configtx.yaml%22%7D%5D,%22raw%22:%22%22,%22raw_para%22:%5B%5D%7D,%22event%22:%7B%22pre_script%22:%22%22,%22test%22:%22%22%7D,%22header%22:%7B%22parameter%22:%5B%5D%7D,%22query%22:%7B%22parameter%22:%5B%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22outputCreateChannelTx%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22mychannel.tx%22%7D,%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22profile%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22TwoOrgsChannel%22%7D,%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22channelID%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22mychannel%22%7D%5D%7D,%22cookie%22:%7B%22parameter%22:%5B%5D%7D,%22resful%22:%7B%22parameter%22:%5B%5D%7D%7D,%22response%22:%7B%22success%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D,%22error%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D%7D%7D,%7B%22target_id%22:%227227c9e7-c3dd-4f39-82ad-19e1d389b3fa%22,%22parent_id%22:%222bbb9465-037e-4dfc-9a4d-10218fb13586%22,%22project_id%22:%22648828a4-cb41-4d47-96f2-d7e25452375f%22,%22mark%22:%22developing%22,%22target_type%22:%22example%22,%22name%22:%22configtxgen%E5%B7%A5%E5%85%B7:%20%E7%94%9F%E6%88%90%E9%94%9A%E8%8A%82%E7%82%B9%E6%96%87%E4%BB%B6%22,%22method%22:%22POST%22,%22sort%22:6,%22type_sort%22:%220%22,%22update_day%22:%221627488000%22,%22update_dtime%22:%222021-07-29%2008:52:06%22,%22bak_id%22:%220%22,%22version%22:%2210%22,%22is_publish%22:%220%22,%22publisher%22:%220%22,%22publish_dtime%22:%220%22,%22hash%22:%22%22,%22is_changed%22:%22-1%22,%22create_dtime%22:%221616639819%22,%22is_doc%22:%220%22,%22url%22:%22http://localhost:8083/configtxgen/profile?outputAnchorPeersUpdate=Org1MSPanchors.tx&asOrg=Org1MSP&profile=TwoOrgsChannel&channelID=mychannel%22,%22request%22:%7B%22url%22:%22http://localhost:8083/configtxgen/profile?outputAnchorPeersUpdate=Org1MSPanchors.tx&asOrg=Org1MSP&profile=TwoOrgsChannel&channelID=mychannel%22,%22description%22:%22%E5%8E%9F%E5%A7%8B%E5%91%BD%E4%BB%A4%EF%BC%9A%5Cn%5Ct%5Ct%5Ct%5Ct%5Ct%5Ct%5Ctconfigtxgen%20-profile%20TwoOrgsChannel%20-outputAnchorPeersUpdate%20./channel-artifacts/Org1MSPanchors.tx%20-channelID%20mychannel%20-asOrg%20Org1MSP%22,%22auth%22:%7B%22type%22:%22noauth%22,%22kv%22:%7B%22key%22:%22%22,%22value%22:%22%22%7D,%22bearer%22:%7B%22key%22:%22%22%7D,%22basic%22:%7B%22username%22:%22%22,%22password%22:%22%22%7D%7D,%22body%22:%7B%22mode%22:%22form-data%22,%22parameter%22:%5B%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22file%22,%22type%22:%22File%22,%22not_null%22:%221%22,%22field_type%22:%22%22,%22value%22:%22/Users/zhang/go/src/fabric-samples/test-network/configtx/configtx.yaml%22%7D%5D,%22raw%22:%22%22,%22raw_para%22:%5B%5D%7D,%22event%22:%7B%22pre_script%22:%22%22,%22test%22:%22%22%7D,%22header%22:%7B%22parameter%22:%5B%5D%7D,%22query%22:%7B%22parameter%22:%5B%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22outputAnchorPeersUpdate%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22Org1MSPanchors.tx%22%7D,%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22asOrg%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22Org1MSP%22%7D,%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22profile%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22TwoOrgsChannel%22%7D,%7B%22description%22:%22%22,%22is_checked%22:1,%22key%22:%22channelID%22,%22type%22:%22Text%22,%22not_null%22:1,%22field_type%22:%22%22,%22value%22:%22mychannel%22%7D%5D%7D,%22cookie%22:%7B%22parameter%22:%5B%5D%7D,%22resful%22:%7B%22parameter%22:%5B%5D%7D%7D,%22response%22:%7B%22success%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D,%22error%22:%7B%22raw%22:%22%22,%22parameter%22:%5B%5D%7D%7D%7D%5D,%22project%22:%7B%22pub_name%22:%22hah%E7%9A%84%E7%A7%81%E6%9C%89%E9%A1%B9%E7%9B%AE%22,%22envs%22:%5B%7B%22id%22:%22648828a4-cb41-4d47-96f2-d7e25452375f/-1%22,%22env_id%22:-1,%22list%22:%7B%7D,%22name%22:%22%E9%BB%98%E8%AE%A4%E7%8E%AF%E5%A2%83%22,%22project_id%22:%22648828a4-cb41-4d47-96f2-d7e25452375f%22%7D%5D,%22vars%22:%7B%22createTime%22:%222021-06-30%22,%22name%22:%22hah%E7%9A%84%E7%A7%81%E6%9C%89%E9%A1%B9%E7%9B%AE%22,%22team_id%22:%22260136f9-36cf-4007-8e5e-4fcd3f7ca451%22,%22project_id%22:%22648828a4-cb41-4d47-96f2-d7e25452375f%22,%22is_admin%22:1,%22is_lock%22:%22-1%22,%22request%22:%7B%22header%22:%5B%7B%22is_checked%22:%221%22,%22type%22:%22Text%22,%22key%22:%22%22,%22value%22:%22%22,%22description%22:%22%22%7D%5D,%22query%22:%5B%7B%22is_checked%22:%221%22,%22type%22:%22Text%22,%22key%22:%22%22,%22value%22:%22%22,%22description%22:%22%22%7D%5D,%22cookie%22:%5B%7B%22is_checked%22:%221%22,%22type%22:%22Text%22,%22key%22:%22%22,%22value%22:%22%22,%22description%22:%22%22%7D%5D,%22body%22:%5B%7B%22is_checked%22:%221%22,%22type%22:%22Text%22,%22key%22:%22%22,%22value%22:%22%22,%22description%22:%22%22%7D%5D%7D,%22script%22:%7B%22pre_script%22:%22%22,%22test%22:%22%22%7D,%22auth%22:%7B%22type%22:%22noauth%22,%22kv%22:%7B%22key%22:%22%22,%22value%22:%22%22%7D,%22bearer%22:%7B%22key%22:%22%22%7D,%22basic%22:%7B%22username%22:%22%22,%22password%22:%22%22%7D%7D,%22methods%22:%5B%22POST%22,%22GET%22,%22PUT%22,%22PATCH%22,%22DELETE%22,%22COPY%22,%22HEAD%22,%22OPTIONS%22,%22LINK%22,%22UNLINK%22,%22PURGE%22,%22LOCK%22,%22UNLOCK%22,%22PROPFIND%22,%22VIEW%22%5D,%22mark%22:%5B%7B%22key%22:%22developing%22,%22name%22:%22%E5%BC%80%E5%8F%91%E4%B8%AD%22%7D,%7B%22key%22:%22complated%22,%22name%22:%22%E5%B7%B2%E5%AE%8C%E6%88%90%22%7D,%7B%22key%22:%22modifying%22,%22name%22:%22%E9%9C%80%E4%BF%AE%E6%94%B9%22%7D%5D,%22globalDescription%22:%7B%22list%22:%5B%5D%7D,%22remote_team_id%22:321082,%22remote_project_id%22:385859%7D,%22isFee%22:true,%22advert_1_src%22:%22%22,%22advert_1_dest%22:%22#%22,%22advert_3_1_src%22:%22%22,%22advert_3_1_dest%22:%22#%22,%22advert_3_2_src%22:%22%22,%22advert_3_2_dest%22:%22#%22%7D%7D,%22salt%22:%224a8a29a75d697a8c%22,%22key%22:%22953d21246f62f256%22%7D'
+    arr = JSON.parse(decodeURI(arr))
+    if (arr.data.project.vars.imgUrl) {
+        $('.doc-head .left img').attr('src', arr.data.project.vars.imgUrl)
+    }else{
+        $('.doc-head .left img').attr('src', 'https://img.cdn.apipost.cn/docs/images/logo.svg')
+    }
+
+    $('.target').show()
+    $('.export_panel').hide()
+
+    $('.target.folder').find('i.fa').removeClass('fa-angle-down').addClass('fa-angle-right')
+        $('.target.folder').nextAll().hide()
+        function findFatherDom (el) {
+            if(el.parent().parent().children(':first').hasClass('folder')){
+                el.parent().show()
+                el.parent().find('i').removeClass('fa-angle-right').addClass('fa-angle-down')
+                findFatherDom(el.parent().prev())
+            }else{
+                el.parent().find('i').removeClass('fa-angle-right').addClass('fa-angle-down')
+                el.parent().children().show()
+                return
+            }
+        }
+        window.onload = function () {
+            let url = window.location.href;
+            let id = url.split('#')[1] ? url.split('#')[1] : '001'
+            if ($(`.target[data-target_id="${id}"]`).length > 0) {
+                if(id != '001'){
+                    findFatherDom($(`.target[data-target_id="${id}"]`))
+                }
+                $(`.target[data-target_id="${id}"]`).trigger('click')
+            } else {
+                location.href = './404.html'
+                return
+            }
+            var resize = document.getElementsByClassName("bar");
+            var left = document.getElementsByClassName("box-first");
+            var mid = document.getElementsByClassName("box-third");
+            var box = document.getElementsByClassName("box");
+            dragControllerDiv(resize, left, mid, box);
+        }
+        $('.body').show()
+            $(document).on('click', '.target', function () {
+                let target_id = $(this).attr('data-id')
+            let _local_target_id = $(this).attr('data-target_id')
+            let url = window.location.href.split('#')[0] + '#' + _local_target_id
+            history.replaceState(null, null, url)
+            $('.target').each((i, el) => {
+                $(el).removeClass('active')
+            })
+            if ($(this).attr('data-type') == 'folder') {
+                $('.box-nav').show()
+                $(this).nextAll().show()
+                $(this).find('i').removeClass('fa-angle-right').addClass('fa-angle-down')
+                $('.box-nav .folder').show()
+                $('.box-nav .api').hide()
+            } else if ($(this).attr('data-type') == 'example' || $(this).attr('data-type') == 'api') {
+                $('.box-nav').show()
+                $('.box-nav .api').show()
+                $('.box-nav .folder').hide()
+
+            } else {
+                $('.box-nav').hide()
+            }
+            if (!target_id) return
+            $(this).addClass('active')
+
+            let newdata = JSON.parse(JSON.stringify(arr))
+            let LevelArr = []
+
+            function levelTree(arr1, newarr) {
+                arr1.forEach(item => {
+                    if (item.children && item.children.length > 0) {
+                        newarr.push(item)
+                        levelTree(item.children, newarr)
+                    } else {
+                        newarr.push(item)
+                    }
+                })
+            }
+            levelTree(newdata.data.list, LevelArr)
+            LevelArr.forEach(item => {
+                if (item.target_id == target_id) {
+                    if (item.target_type == 'example' || item.target_type == 'api') {
+                        switch (item.request.body.mode) {
+                            case "none":
+                                break;
+                            case "form-data":
+                                item.request.body.mode = "multipart/form-data";
+                                break;
+                            case "urlencoded":
+                                item.request.body.mode =
+                                    "application/x-www-form-urlencoded";
+                                break;
+                            case "json":
+                                item.request.body.mode = "application/json";
+                                break;
+                            case "xml":
+                                item.request.body.mode = "application/xml";
+                                break;
+                            case "javascript":
+                                item.request.body.mode = "application/javascript";
+                                break;
+                            case "plain":
+                                item.request.body.mode = "text/plain";
+                                break;
+                            case "html":
+                                item.request.body.mode = "text/html";
+                                break;
+                        }
+                        $('.api_nav_tpl').html(template('template-nav-menu-tpl',item));
+                    }
+                    item["advert_1_src"] = "";
+                    item["advert_1_dest"] =  "#";
+                    item["advert_3_1_src"] = "";
+                    item["advert_3_1_dest"] = "#";
+
+                    item["advert_3_2_src"] = "";
+                    item["advert_3_2_dest"] = "#";
+                    let _html = template('template-example-doc-tpl', item);
+                    $('.preview-markdown').html(_html)
+                    if (item.target_type == 'folder') {
+                        if ($('table.header tr').length <= 1) {
+                            $('table.header').parent().hide()
+                            $('table.header').parent().prev().hide()
+                            $('.box-nav .nav-folder-btn[data-id="1"]').hide()
+                            // $('table.header tr').after(
+                            //     '<tr><td colspan="4" style="text-align:center">暂无数据</td></tr>')
+                        }
+                        if ($('table.query tr').length <= 1) {
+                            $('table.query').parent().hide()
+                            $('table.query').parent().prev().hide()
+                            $('.box-nav .nav-folder-btn[data-id="2"]').hide()
+                            // $('table.query tr').after(
+                            //     '<tr><td colspan="4" style="text-align:center">暂无数据</td></tr>')
+                        }
+                        if ($('table.body tr').length <= 1) {
+                            $('table.body').parent().hide()
+                            $('table.body').parent().prev().hide()
+                            $('.box-nav .nav-folder-btn[data-id="3"]').hide()
+                            // $('table.body tr').after(
+                            //     '<tr><td colspan="4" style="text-align:center">暂无数据</td></tr>')
+                        }
+                        if($('table.header tr').length <= 1 && $('table.query tr').length <= 1 && $('table.body tr').length <= 1){
+                            $('table.header').parents('.markdown-request').prev().hide()
+                            $('.box-nav .nav-folder-btn[data-id="0"]').hide()
+                            $('.box-nav').hide()
+                            $('.markdown-request').append('<div style="height:100%;text-align:center;overflow:hidden;"><img src="https://img.cdn.apipost.cn/docs/images/empty.svg" style="width:100px;margin:70px auto 20px;">暂无参数</div>')
+                        }
+                    }
+                    hljs.initHighlighting();
+                    if (item.target_type != 'folder') {
+                        let _export_data = new ClipboardJS('.CopyCurrentData', {
+                            text: function (trigger) {
+                                return trigger.getAttribute('data-clipboard-text');
+                            }
+                        });
+                        console.log(_export_data );
+                        _export_data.on('success', function (e) {
+                            $('.CopyCurrentData').text('已复制').addClass('success');
+                            e.clearSelection();
+                        });
+                        _export_data.on('error', function (e) {
+                            console.log('失败');
+                        });
+                    }
+                }
+            })
+            })
+            .on('click', '.control', function (e) {
+                e.stopPropagation()
+                let type = $(this).find('i').hasClass('fa-angle-down')
+                if (type) {
+                    $(this).find('i').removeClass('fa-angle-down').addClass('fa-angle-right')
+                } else {
+                    $(this).find('i').removeClass('fa-angle-right').addClass('fa-angle-down')
+                }
+                $(this).parents('.target').nextAll().toggle()
+            })
+            .on('input', '.search', function (e) {
+                if (timer) {
+                    clearTimeout(timer);
+                }
+                timer = setTimeout(() => {
+                    let searchVal = $(this).val()
+                    let TreeData = JSON.parse(JSON.stringify(arr.data.list))
+                    let searchArr = []
+                    let LevelArr = []
+                    let fatherArr = []
+
+                    function openTree(tree, parent_id) {
+                        tree.forEach((item) => {
+                            if (item.children && item.children.length > 0) {
+                                openTree(item.children, item.target_id)
+                            }
+                            item.parent_id = parent_id
+                        })
+                    }
+                    openTree(TreeData, 0);
+
+                    function levelTree(arr, newarr) {
+                        arr.forEach(item => {
+                            if (item.children && item.children.length > 0) {
+                                newarr.push(item)
+                                levelTree(item.children, newarr)
+                            } else {
+                                newarr.push(item)
+                            }
+                        })
+                    }
+                    levelTree(TreeData, LevelArr)
+                    if ($.trim(searchVal) != '') {
+                        LevelArr.forEach(item => {
+                            if (item.target_type == 'folder') {
+                                if (item.name.toString().indexOf(searchVal) > -1) {
+                                    searchArr.push(item)
+                                }
+                            } else {
+                                if (item.name.toString().indexOf(searchVal) > -1 || item.method
+                                    .toString().indexOf(searchVal) > -1) {
+                                    searchArr.push(item)
+                                }
+                            }
+                        })
+                        searchArr.forEach(item => {
+                            findFather(fatherArr, LevelArr, item)
+                        })
+
+                        function findFather(tempArr, arr, self) {
+                            if (self.parent_id != 0) {
+                                arr.filter(item => {
+                                    if (self.parent_id == item.target_id) {
+                                        findFather(tempArr, arr, item);
+                                        if (tempArr.indexOf(item) === -1) {
+                                            tempArr.push(item);
+                                        }
+                                    }
+                                })
+                            }
+                        }
+                        let finnalArr = searchArr.concat(fatherArr)
+                        $('.target').hide()
+                        $('.target[data-target_id="001"]').show()
+                        finnalArr.forEach(item => {
+                            $(`.target[data-target_id="${item.target_id}"]`).parent().show()
+                            $(`.target[data-target_id="${item.target_id}"]`).show()
+                            $('.target.folder').find('i').removeClass('fa-angle-right').addClass('fa-angle-down')
+                        })
+                    } else {
+                        console.log(11111);
+                        $('.target').parent().show()
+                        $('.target').show()
+                    }
+                }, 100)
+            })
+            .on('mouseover', '.target.api', function () {
+                $(this).find('em').css({
+                    visibility: 'visible'
+                })
+
+            })
+            .on('mouseleave', '.target.api', function () {
+                $(this).find('em').css({
+                    visibility: 'hidden'
+                })
+            })
+            .on('click', '.nav-btn', function () {
+                let index = parseInt($(this).attr('data-id'))
+                $('.nav-btn').removeClass('cur')
+                $(this).addClass('cur')
+                let top = $('.box-third .title').eq(index)[0].offsetTop
+                $('.box-third').scrollTop(top)
+            })
+            .on('click', '.nav-folder-btn', function () {
+                let index = parseInt($(this).attr('data-id'))
+                $('.nav-folder-btn').removeClass('cur')
+                $(this).addClass('cur')
+                let top = $('.box-third .title').eq(index)[0].offsetTop
+                $('.box-third').scrollTop(top)
+            })
+            .on('click', '.box-first .top', function () {
+                let data = arr.data.project
+                $(this).addClass('active')
+                let _html = template('golbal-env-tpl', data);
+                $('.preview-markdown').html(_html)
+                $('.advert_1').hide()
+                $('.advert_1').css({
+                    visibility: 'hidden'
+                })
+            })
+            .on('click', 'h3.title', function () {
+                let type = $(this).find('i').hasClass('fa-angle-down')
+                if (type) {
+                    $(this).find('i').removeClass('fa-angle-down').addClass('fa-angle-left')
+                } else {
+                    $(this).find('i').removeClass('fa-angle-left').addClass('fa-angle-down')
+                }
+                $(this).next().toggle()
+            })
+            .on('mouseover', '.export', function () {
+                $(this).find('.export_panel').show()
+            })
+            .on('mouseleave', '.export', function () {
+                $(this).find('.export_panel').hide()
+            })
+            .on('mouseover', '.CopyCurrentData', function () {
+                let local_target_id = $(this).attr('data-target_id')
+                let newdata = JSON.parse(JSON.stringify(arr))
+                let LevelArr = []
+                function levelTree(arr1, newarr) {
+                    arr1.forEach(item => {
+                        if (item.children && item.children.length > 0) {
+                            newarr.push(item)
+                            levelTree(item.children, newarr)
+                        } else {
+                            newarr.push(item)
+                        }
+                    })
+                }
+                levelTree(newdata.data.list, LevelArr)
+                LevelArr.forEach((item) => {
+                    if (item.target_id == local_target_id) {
+                        $(this).attr('data-clipboard-text', JSON.stringify(item));
+                    }
+                })
+            })
+        $(".box-third").scroll(function () {
+            let arr = []
+            $('.box-third .title').each((i, el) => {
+                arr.push($(el)[0].offsetTop)
+            })
+            arr.push(arr[arr.length - 1] + 1000)
+            let topHeight = $(this).scrollTop()
+            if ($('.target.active').hasClass('api')) {
+                for (let index = 0; index < arr.length; index++) {
+                    if (arr[index] < topHeight && topHeight < arr[index + 1]) {
+                        $('.nav-btn').removeClass('cur')
+                        $('.nav-btn').eq(index).addClass('cur')
+                    }
+                }
+            } else {
+                for (let index = 0; index < arr.length; index++) {
+                    if (arr[index] < topHeight && topHeight < arr[index + 1]) {
+                        $('.nav-folder-btn').removeClass('cur')
+                        $('.nav-folder-btn').eq(index).addClass('cur')
+                    }
+                }
+            }
+        });
+        function exportHtml() {window.location.href="https://www.apipost.cn/"}
+        function exportMd() {window.location.href="https://www.apipost.cn/"}
+        function exportWord(){window.location.href="https://www.apipost.cn/"}
+    </script></body></html>

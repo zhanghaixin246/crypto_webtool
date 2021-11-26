@@ -1,0 +1,11 @@
+crypto_webtool
+.DS_Store
+/log/
+latest_log
+#本地临时文件
+/api-generate/
+/api-generate 2/
+api-generate.tar.gz
+/organizations/
+organizations.tar.gz
+tmp.yaml
